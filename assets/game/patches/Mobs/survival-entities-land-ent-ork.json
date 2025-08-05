@@ -1,0 +1,35 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-ork-normal",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/land/ork.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-ork-alternate_1",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/land/ork.json",
+                    "side": "Server"
+    }
+    
+      ]

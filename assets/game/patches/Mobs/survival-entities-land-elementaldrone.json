@@ -1,0 +1,19 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-EntityDroneRM",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/creatures/drone/entityelementaldrone.json",
+                    "side": "Server"
+    }    
+    
+      ]

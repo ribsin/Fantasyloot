@@ -1,0 +1,132 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-EntityColossusFireRM",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/creatures/elementals/entityelementalcolossus.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-EntityColossusWaterRM",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/creatures/elementals/entityelementalcolossus.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-EntityColossusWindRM",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/creatures/elementals/entityelementalcolossus.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-EntityColossusEarthRM",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/creatures/elementals/entityelementalcolossus.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-EntityColossusLightningRM",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/creatures/elementals/entityelementalcolossus.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-EntityColossusFrostRM",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/creatures/elementals/entityelementalcolossus.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-EntityColossusNatureRM",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/creatures/elementals/entityelementalcolossus.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-EntityColossusArcaneRM",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/creatures/elementals/entityelementalcolossus.json",
+                    "side": "Server"
+    }
+    
+    
+      ]

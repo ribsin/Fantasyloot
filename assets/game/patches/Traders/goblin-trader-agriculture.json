@@ -1,0 +1,19 @@
+[
+	{
+        "op": "replace",
+	   "path": "/client/assets/survival/entity/humanoid/renderer*trader-agriculture",
+	   "value": [
+          {
+            "shape": "cavegoblin-normal",
+            "base": "entity/land/goblin" 
+            },	
+            {
+            "texture": "cavegoblin-normal",
+            "base": "entity/land/goblin"
+            }	
+		],
+	    "file": "entities/land/cavegoblin",               
+		"side": "client"
+    }
+    
+      ]
