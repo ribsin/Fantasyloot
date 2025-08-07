@@ -1,0 +1,221 @@
+{
+	"code": "slime",
+	"class": "EntityAgent",
+	"variantgroups": [
+		{ "code": "type", "states": ["blue", "green"]}
+	],
+	"hitboxSize": { "x": 0.8, "y": 1.6 },
+	"deadHitboxSize": { "x": 0.6, "y": 0.5 },
+	"canClimb": true,
+	"canClimbAnywhere": true,
+	"climbTouchDistance": 0.1,
+	"rotateModelOnClimb": true,
+	"fallDamage": false,
+	"eyeHeight": 1.2,
+	"drops": [],
+	"client": {
+		"renderer": "Shape",
+		"shapeByType": {
+			"slime-blue": {"base": "entity/land/slime" },
+			"slime-green": {"base": "entity/land/slime"}
+		},
+		"texturesByType": {
+			"slime-blue": {
+				"skin": { "base": "entity/slime/slime-blue"}
+			},
+			"slime-green": {
+				"skin": { "base": "entity/slime/slime-green"}
+			}
+		},
+		"behaviors": [
+			{ "code": "repulseagents" }, 
+			{ "code": "controlledphysics", "stepHeight": 1.1251 }, 
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "interpolateposition" },
+			{ "code": "harvestable", "duration": 2 }
+		],
+		"animations": [
+			{
+				"code": "die",
+				"animation": "death", 
+				"animationSpeed": 0.7,
+				"weight": 10,
+				"blendMode": "Average",
+				"triggeredBy": { "onControls": ["dead"] }
+			},
+			{ 
+				"code": "idle", 
+				"animation": "idle",
+				"blendMode": "Average", 
+				"triggeredBy": { "defaultAnim": true }
+			}
+		]
+	},
+	"server": {
+		"behaviors": [
+			{ "code": "repulseagents" }, 
+			{ "code": "controlledphysics", "stepHeight": 1.1251 },
+			{ "code": "health", 
+				"currenthealthByType": {
+					"slime-blue": 25,
+					"slime-green": 25
+				}, 
+				"maxhealthByType": {
+					"slime-blue": 25,
+					"slime-green": 25
+				} 
+			},
+			{ "code": "deaddecay", "hoursToDecay": 0.2 },
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "despawn", "minPlayerDistance": 8, "minSeconds": 300 },
+			{
+				"code": "emotionstates",
+				"states": [ 
+					{
+						"code": "fleeondamage", 
+						"duration": 10,
+						"chanceByType": {
+							"slime-blue": 0.05,
+							"slime-green": 0.05
+						},
+						"slot": 0, 
+						"priority": 1, 
+						"accumType": "max" 
+					}
+				]
+			},
+			{
+				"code": "taskai",
+				"aitasks": [
+					{
+						"code": "fleeentity",
+						"entityCodes": ["player"],
+						"priority": 2.5,
+						"movespeed": 0.018,
+						"seekingRange": 12,
+						"cancelOnHurt": true,
+						"animationSpeed": 1.3,
+						"whenInEmotionState": "fleeondamage",
+						"animation": "walk"
+					},
+					{
+						"code": "meleeattack",
+						"entityCodes": ["player", "fox-female", "fox-male", "hare-male-*", "hare-female-*", "fox-arctic-male", "fox-arctic-female", "surfacegoblin-normal", "surfacegoblin-alternate_1", "surfacegoblin-armored", "surfacegoblin-hunter", "lonehuntergoblin-normal", "lonehuntergoblin-pelted", "treant-walnut", "treant-oak", "treant-pine", "ent-shepherd-normal"],
+						"priority": 2,
+						"damageByType": {
+							"slime-blue": 6,
+							"slime-green": 6
+						},
+						"damageTierByType": {
+							"slime-blue": 1,
+							"slime-green": 1
+						},
+						"mincooldown": 500, 
+						"maxcooldown": 1750, 
+						"damagePlayerAtMs": 400,
+						"attackDurationMs": 1000,
+						"animation": "attack",
+						"animationSpeed": 0.75,
+						"sound": "creature/slime_attack"
+					},
+					{
+						"code": "seekentity",
+						"entityCodes": ["player", "fox-female", "fox-male", "hare-male-*", "hare-female-*", "fox-arctic-male", "fox-arctic-female", "surfacegoblin-normal", "surfacegoblin-alternate_1", "surfacegoblin-armored", "surfacegoblin-hunter", "lonehuntergoblin-normal", "lonehuntergoblin-pelted", "treant-walnut", "treant-oak", "treant-pine", "ent-shepherd-normal"],
+						"priority": 1.5,
+						"mincooldown": 400, 
+						"maxcooldown": 800, 
+						"movespeed": 0.02,
+						"seekingRange": 15,
+						"animationSpeed": 1.3,
+						"animation": "walk",
+						"sound": "creature/slime_idle"
+					},
+					{
+						"code": "idle",
+						"priority": 1.2,
+						"priorityForCancel": 1.35,
+						"minduration": 4000,
+						"maxduration": 6000,
+						"chance": 0.001,
+						"initialMinCoolDown": 2000,
+						"initialMaxCoolDown": 150000,
+						"mincooldown": 300000,
+						"maxcooldown": 10000000,
+						"animation": "idle",
+						"animationSpeed": 1.25,
+						"sound": "creature/slime_idle"
+					},
+					{
+						"code": "wander", 
+						"priority": 1.0, 
+						"movespeed": 0.01,
+						"animationSpeed": 1.0,
+						"animation": "walk",
+						"preferredLightLevel": 15,
+						"sound": "creature/slime_idle"
+					},
+					{
+						"code": "wander", 
+						"priority": 0.99,
+						"priorityForCancel": 1.1,
+						"movespeed": 0.008,
+						"animationSpeed": 1.1,
+						"animation": "walk",
+						"preferredLightLevel": 15,
+						"sound": "creature/slime_idle"
+					},
+					{
+						"code": "getoutofwater",
+						"priority": 1.4,
+						"movespeed": 0.04,
+						"animation": "walk",
+						"animationSpeed": 1.6,
+						"sound": "creature/slime_idle"
+					},
+					{ 
+						"code": "lookaround", 
+						"priority": 0.5
+					}
+				]
+			},
+			{ "code":
+				"harvestable",
+				"duration": 2,
+				"dropsByType": {
+					"slime-blue": [
+						{
+							"type": "item",
+							"code": "game:gear-temporal",
+							"quantity": { "avg": 0.03, "var": 0 }
+						},
+						{
+							"type": "item",
+							"code": "game:flaxfibers",
+							"quantity": { "avg": 0.2, "var": 0 }
+						}
+					],
+					"slime-green": [
+						{
+							"type": "item",
+							"code": "game:gear-temporal",
+							"quantity": { "avg": 0.03, "var": 0 }
+						},
+						{
+							"type": "item",
+							"code": "game:flaxfibers",
+							"quantity": { "avg": 0.2, "var": 0 }
+						}
+					]
+				}
+			}
+		],
+		"spawnconditions": {
+		}
+	},
+	"idleSoundRange": 14,
+	"sounds": {
+		"hurt": "game:creature/drifter-hit",
+		"death": "creature/slime_die",
+		"idle": "creature/slime_idle"
+	}
+}

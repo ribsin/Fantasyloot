@@ -1,0 +1,263 @@
+{
+	"code": "skeletonblkgrd",
+	"class": "EntityAgent",
+	"variantgroups": [
+		{ "code": "type", "states": ["normal"]}
+	],
+	"hitboxSize": { "x": 0.9, "y": 1.9 },
+	"deadHitboxSize": { "x": 1.2, "y": 0.5 },
+	"canClimb": true,
+	"eyeHeight": 1.2,
+	"drops": [],
+	"client": {
+		"renderer": "Shape",
+		"shape": { "base": "entity/land/skeleton_blckgrd_full" },
+		"textures": { 
+			"skeleton_blackguard": { "base":"entity/skeleton/skeleton_blackguard"},
+			"metal": { "base":"game:item/tool/material/iron"},
+			"handle": { "base":"game:item/tool/sword-blackguard"}
+		},
+		"behaviors": [
+			{ "code": "repulseagents" }, 
+			{ "code": "controlledphysics", "stepHeight": 1.1251 }, 
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "interpolateposition" },
+			{ "code": "harvestable", "quantitySlots": 11, "duration": 2 }
+		],
+		"animations": [
+			{
+				"code": "hurt",
+				"animation": "hurt", 
+				"animationSpeed": 2,
+				"weight": 10,
+				"blendMode": "AddAverage" 
+			},
+			{
+				"code": "die",
+				"animation": "die", 
+				"animationSpeed": 0.7,
+				"weight": 10,
+				"blendMode": "Average",
+				"triggeredBy": { "onControls": ["dead"] }
+			},
+			{
+				"code": "sleep", 
+				"animation": "sleeping",
+				"easeInSpeed": 4,
+				"easeOutSpeed": 4,
+				"weight": 9,
+				"blendMode": "Average", 
+			},
+			{ 
+				"code": "idle", 
+				"animation": "idle",
+				"weight": 0.01,
+				"blendMode": "Average",
+				"triggeredBy": { "defaultAnim": true }
+			},
+			{ 
+				"code": "walk", 
+				"animation": "walk",
+				"weight": 1.0,
+				"blendMode": "AddAverage"
+			},
+			{ 
+				"code": "run", 
+				"animation": "run",
+				"weight": 1.0,
+				"blendMode": "AddAverage"
+			},
+			{ 
+				"code": "attack", 
+				"animation": "attack",
+				"weight": 2.0,
+				"blendMode": "AddAverage"
+			}
+		]
+	},
+	"server": {
+		"behaviors": [
+			{ "code": "repulseagents" }, 
+			{ "code": "controlledphysics", "stepHeight": 1.1251 },
+			{ "code": "health", "currenthealth": 12, "maxhealth": 12 },
+			{ "code": "deaddecay", "hoursToDecay": 3 },
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "despawn", "minPlayerDistance": 8, "minSeconds": 300 },
+			{
+				"code": "taskai",
+				"aitasks": [
+					{
+						"code": "meleeattack",
+						"entityCodes": ["player","slime-blue","slime-green", "dragon-*"],
+						"priority": 2,
+						"damage": 10,
+						"damageTier": 2,
+						"mincooldown": 500, 
+						"maxcooldown": 1750, 
+						"damagePlayerAtMs": 400,
+						"attackDurationMs": 1000,
+						"animation": "attack",
+						"animationSpeed": 1.5
+					},
+					{
+						"code": "seekentity",
+						"entityCodes": ["player","slime-blue","slime-green", "dragon-*"],
+						"priority": 1.5,
+						"mincooldown": 400, 
+						"maxcooldown": 800, 
+						"movespeed": 0.018,
+						"seekingRange": 15,
+						"animationSpeed": 1.3,
+						"animation": "run",
+						"sound": "creature/skeleton_rattle"
+					},
+					{
+						"code": "idle",
+						"priority": 1.2,
+						"priorityForCancel": 1.35,
+						"minduration": 4000,
+						"maxduration": 6000,
+						"chance": 0.1,
+						"initialMinCoolDown": 2000,
+						"initialMaxCoolDown": 150000,
+						"mincooldown": 300000,
+						"maxcooldown": 10000000,
+						"animation": "idle",
+						"animationSpeed": 1.25
+					},
+					
+					{
+						"code": "idle",
+						"priority": 1.45,
+						"priorityForCancel": 1.55,
+						"minduration": 200000,
+						"maxduration": 800000,
+						"mincooldown": 10000,
+						"maxcooldown": 30000,
+						"animation": "sleeping",
+						"whenNotInEmotionState": "aggressiveondamage",
+						"duringDayTimeFrames": [ { "fromHour": 10, "toHour": 18 }, { "fromHour": 1, "toHour": 3 } ],
+						"stopOnNearbyEntityCodes": ["player","slime-blue","slime-green"],
+						"stopRange": 2,
+						"stopOnHurt": true
+					},
+					{
+						"code": "wander", 
+						"priority": 1.0, 
+						"movespeed": 0.01,
+						"animationSpeed": 1.2,
+						"animation": "walk",
+						"preferredLightLevel": 15
+					},
+					{
+						"code": "wander", 
+						"priority": 0.99,
+						"priorityForCancel": 1.1,
+						"movespeed": 0.008,
+						"animationSpeed": 1.1,
+						"animation": "walk",
+						"preferredLightLevel": 15
+					},
+					{
+						"code": "getoutofwater",
+						"priority": 1.4,
+						"movespeed": 0.018,
+						"animation": "run",
+						"animationSpeed": 1.6
+					},
+					{ 
+						"code": "lookaround", 
+						"priority": 0.5
+					}
+				]
+			},
+			{ "code":
+				"harvestable",
+				"quantitySlots": 11,
+				"duration": 2,
+				"drops": [
+					{
+						"type": "item",
+						"code": "game:gear-temporal",
+						"quantity": { "avg": 0.02666, "var": 0 }
+					},
+					{
+						"type": "item",
+						"code": "game:gear-rusty",
+						"quantity": { "avg": 3, "var": 1 }
+					},
+					{
+						"type": "item",
+						"code": "game:armor-body-antique-blackguard-broken",
+						"quantity": { "avg": 0.0133, "var": 0 }
+					},
+					{
+						"type": "item",
+						"code": "game:armor-body-antique-blackguard-damaged",
+						"quantity": { "avg": 0.0133, "var": 0 }
+					},
+					{
+						"type": "item",
+						"code": "game:armor-head-antique-blackguard-broken",
+						"quantity": { "avg": 0.0133, "var": 0 }
+					},
+					{
+						"type": "item",
+						"code": "game:armor-head-antique-blackguard-damaged",
+						"quantity": { "avg": 0.0133, "var": 0 }
+					},
+					{
+						"type": "item",
+						"code": "game:armor-legs-antique-blackguard-broken",
+						"quantity": { "avg": 0.0133, "var": 0 }
+					},
+					{
+						"type": "item",
+						"code": "game:armor-legs-antique-blackguard-damaged",
+						"quantity": { "avg": 0.0133, "var": 0 }
+					},
+					{
+						"type": "item",
+						"code": "game:flaxfibers",
+						"quantity": { "avg": 0.2, "var": 0 }
+					},
+					{
+						"type": "item",
+						"code": "game:bone",
+						"quantity": { "dist":"uniform", "avg": 0.1, "var": 3 }
+					},
+					{
+						"type": "item",
+						"code": "game:clutter-skull/humanoid",
+						"quantity": { "avg": 0.6, "var": 0 }
+					}
+				]
+			}
+		],
+		"spawnconditions": {
+			"runtime": {
+				"group": "hostile",
+				"tryOnlySurface": true,
+				"maxQuantity": 1,
+				"maxLightLevel": 12,
+				"lightLevelType": "MaxTimeOfDayLight",
+				"chance": 0.00055,
+				"minDistanceToPlayer": 40,
+				"groupSize": { "avg": 1, "var": 0 },
+				"insideBlockCodes": ["game:air", "game:snowLayer"],
+				"minTemp": -50,
+				"maxTemp": 50,
+				"minRain": 0.25,
+				"minForestOrShrubs": 0.25,
+				"maxForest": 0.75,
+				"maxShrubs": 0.75
+			}
+		}
+	},
+	"idleSoundRange": 14,
+	"sounds": {
+		"hurt": "creature/skeleton_rattle2",
+		"death": "creature/skeleton_die",
+		"idle": "creature/skeleton_creak"
+	}
+}

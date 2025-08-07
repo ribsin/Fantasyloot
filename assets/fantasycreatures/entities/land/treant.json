@@ -1,0 +1,382 @@
+{
+	"code": "treant",
+	"class": "EntityAgent",
+	"variantgroups": [
+		{ "code": "type", "states": ["walnut", "oak", "pine"]}
+	],
+	"hitboxSize": { "x": 4, "y": 7 },
+	"collisionBoxSize": { "x": 4, "y": 7 },
+	"deadHitboxSize": { "x": 2, "y": 4 },
+	"canClimb": true,
+	"fallDamage": false,
+	"eyeHeight": 0.5,
+	"dropsByType": {
+		"treant-walnut": [
+			{
+				"type": "item",
+				"code": "game:stick",
+				"quantity": { "avg": 3, "var": 2 }
+			},
+			{
+				"type": "block",
+				"code": "game:log-placed-walnut-ud",
+				"quantity": { "avg": 12, "var": 3 }
+			}
+		],
+		"treant-oak": [
+			{
+				"type": "item",
+				"code": "game:stick",
+				"quantity": { "avg": 3, "var": 2 }
+			},
+			{
+				"type": "block",
+				"code": "game:log-placed-oak-ud",
+				"quantity": { "avg": 12, "var": 3 }
+			}
+		],
+		"treant-pine": [
+			{
+				"type": "item",
+				"code": "game:stick",
+				"quantity": { "avg": 3, "var": 2 }
+			},
+			{
+				"type": "block",
+				"code": "game:log-placed-pine-ud",
+				"quantity": { "avg": 12, "var": 3 }
+			}
+		]
+	},
+	"client": {
+		"renderer": "Shape",
+		"shapeByType": {
+			"treant-walnut": {"base": "entity/land/treant" },
+			"treant-oak": {"base": "entity/land/treant"},
+			"treant-pine": {"base": "entity/land/treant-pine"}
+		},
+		"texturesByType": {
+			"treant-walnut": {
+				"empty": { "base": "block/empty"},
+				"largeleaves": { "base": "entity/treant/walnut1"},
+				"log12": { "base": "entity/treant/walnut1"},
+				"logside": { "base": "game:block/wood/bark/walnut"},
+				"logwide": { "base": "block/wood/bark/walnutwide"},
+				"log": { "base": "game:block/wood/treetrunk/walnut"},
+				"treantface": { "base": "entity/treant/walnutface"}
+			},
+			"treant-oak": {
+				"empty": { "base": "block/empty"},
+				"largeleaves": { "base": "entity/treant/oak1"},
+				"log12": { "base": "entity/treant/oak1"},
+				"logside": { "base": "game:block/wood/bark/oak"},
+				"logwide": { "base": "block/wood/bark/oakwide"},
+				"log": { "base": "game:block/wood/treetrunk/oak"},
+				"treantface": { "base": "entity/treant/oakface"}
+			},
+			"treant-pine": {
+				"empty": { "base": "block/empty"},
+				"largeleaves": { "base": "entity/treant/pine1"},
+				"log12": { "base": "entity/treant/pine1"},
+				"logside": { "base": "game:block/wood/bark/pine"},
+				"logwide": { "base": "block/wood/bark/pinewide"},
+				"log": { "base": "game:block/wood/treetrunk/pine"},
+				"treantface": { "base": "entity/treant/pineface"}
+			}
+		},
+		"behaviors": [
+			{ "code": "repulseagents" }, 
+			{ "code": "controlledphysics", "stepHeight": 1.1251 }, 
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "interpolateposition" },
+			{ "code": "harvestable", "quantitySlots": 6, "duration": 2 }
+		],
+		"animations": [
+			{
+				"code": "hurt",
+				"animation": "standhurt", 
+				"animationSpeed": 2,
+				"weight": 10,
+				"blendMode": "AddAverage" 
+			},
+			{
+				"code": "die",
+				"animation": "standdie", 
+				"animationSpeed": 0.7,
+				"weight": 10,
+				"blendMode": "Average",
+				"triggeredBy": { "onControls": ["dead"] }
+			},
+			{ 
+				"code": "idle", 
+				"animation": "standidle",
+				"blendMode": "Average", 
+				"triggeredBy": { "defaultAnim": true }
+			}
+		]
+	},
+	"server": {
+		"behaviors": [
+			{ "code": "repulseagents" }, 
+			{ "code": "controlledphysics", "stepHeight": 1.1251 },
+			{ "code": "health", 
+				"currenthealthByType": {
+					"treant-walnut": 120,
+					"treant-oak": 120,
+					"treant-pine": 120
+				}, 
+				"maxhealthByType": {
+					"treant-walnut": 120,
+					"treant-oak": 120,
+					"treant-pine": 120
+				} 
+			},
+			{ "code": "deaddecay", "hoursToDecay": 10 },
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "despawn", "minPlayerDistance": 8, "minSeconds": 100000 },
+			{
+				"code": "taskai",
+				"aitasks": [
+					{
+						"code": "meleeattack",
+						"entityCodes": [
+							"player", 
+							"cavegoblin-normal", 
+							"cavegoblin-lessarmored", 
+							"surfacegoblin-normal", 
+							"surfacegoblin-armored", 
+							"surfacegoblin-hunter", 
+							"surfacegoblin-alternate_1", 
+							"lonehuntergoblin-pelted", 
+							"lonehuntergoblin-normal", 
+							"ork-normal", 
+							"ork-alternate_1",
+							"slime-blue","slime-green",
+							"game:drifter-*"
+						],
+						"priority": 2,
+						"minDist": 4.9,
+						"minVerDist": 7.2,
+						"damage": 18,
+						"damageTier": 1,
+						"mincooldown": 500, 
+						"maxcooldown": 1750, 
+						"damagePlayerAtMs": 400,
+						"attackDurationMs": 1000,
+						"animation": "standattack",
+						"animationSpeed": 1.0,
+						"sound": "game:effect/treefell"
+					},
+					{
+						"code": "seekentity",
+						"entityCodes": [
+							"player", 
+							"cavegoblin-normal", 
+							"cavegoblin-lessarmored", 
+							"surfacegoblin-normal", 
+							"surfacegoblin-armored", 
+							"surfacegoblin-hunter", 
+							"surfacegoblin-alternate_1", 
+							"lonehuntergoblin-pelted", 
+							"lonehuntergoblin-normal", 
+							"ork-normal", 
+							"ork-alternate_1",
+							"slime-blue","slime-green",
+							"game:drifter-*"
+						],						
+						"priority": 1.5,
+						"mincooldown": 5000, 
+						"maxcooldown": 7000, 
+						"movespeed": 0.03,
+						"seekingRange": 10,
+						"extraTargetDistance": 2,
+						"animationSpeed": 1.3,
+						"animation": "standlowwalk",
+						"sound": "creature/treant_idle"
+					},
+					{
+						"code": "stayclosetoentity",
+						"priority": 1.35,
+						"entityCode": "ent-shepherd-normal",
+						"movespeed": 0.03,
+						"maxDistance": 4,
+						"searchRange": 32,
+						"animation": "standlowwalk"
+					},
+
+					{
+						"code": "idle",
+						"priority": 1.2,
+						"priorityForCancel": 1.35,
+						"minduration": 1000,
+						"maxduration": 800000,
+						"mincooldown": 100,
+						"maxcooldown": 30000,
+						"animation": "standidle",
+						"animationSpeed": 1.25,
+						"stopOnNearbyEntityCodes": [
+							"player", 
+							"ent-shepherd-normal",
+							"cavegoblin-normal", 
+							"cavegoblin-lessarmored", 
+							"surfacegoblinnormal", 
+							"surfacegoblin-armored", 
+							"surfacegoblin-hunter", 
+							"surfacegoblin-alternate_1", 
+							"lonehuntergoblin-pelted", 
+							"lonehuntergoblin-normal", 
+							"ork-normal", 
+							"ork-alternate_1",
+							"slime-blue","slime-green",
+							"game:drifter-*"
+						],
+						"stopRange": 10,
+						"stopOnHurt": true
+					}
+				]
+			},
+			{ "code":
+				"harvestable",
+				"duration": 2,
+				"quantitySlots": 6,
+				"dropsByType": {
+					"treant-walnut": [
+						{
+							"type": "item",
+							"code": "game:gear-temporal",
+							"quantity": { "avg": 1, "var": 0 }
+						},
+						{
+							"type": "item",
+							"code": "game:stick",
+							"quantity": { "avg": 3, "var": 2 }
+						},
+						{
+							"type": "block",
+							"code": "game:log-placed-walnut-ud",
+							"quantity": { "avg": 4, "var": 3 }
+						},
+						{
+							"type": "item",
+							"code": "game:clothes-neck-walnut-amulet",
+							"quantity": { "avg": 1, "var": 0 }
+						},
+						{
+							"type": "block",
+							"code": "game:crystal-olivine-large2-up",
+							"quantity": { "avg": 0.05, "var": 0 }
+						}
+
+					],
+					"treant-oak": [
+						{
+							"type": "item",
+							"code": "game:gear-temporal",
+							"quantity": { "avg": 1, "var": 0 }
+						},
+						{
+							"type": "item",
+							"code": "game:stick",
+							"quantity": { "avg": 3, "var": 2 }
+						},
+						{
+							"type": "block",
+							"code": "game:log-placed-oak-ud",
+							"quantity": { "avg": 4, "var": 3 }
+						},
+						{
+							"type": "item",
+							"code": "game:clothes-neck-acorn-amulet",
+							"quantity": { "avg": 1, "var": 0 }
+						},
+						{
+							"type": "block",
+							"code": "game:crystal-olivine-large2-up",
+							"quantity": { "avg": 0.05, "var": 0 }
+						}
+					],
+					"treant-pine": [
+						{
+							"type": "item",
+							"code": "game:gear-temporal",
+							"quantity": { "avg": 1, "var": 0 }
+						},
+						{
+							"type": "item",
+							"code": "game:stick",
+							"quantity": { "avg": 3, "var": 2 }
+						},
+						{
+							"type": "block",
+							"code": "game:log-placed-pine-ud",
+							"quantity": { "avg": 4, "var": 3 }
+						},
+						{
+							"type": "block",
+							"code": "game:log-resin-pine-ud",
+							"quantity": { "avg": 1, "var": 0 }
+						},
+						{
+							"type": "block",
+							"code": "game:crystal-olivine-large2-up",
+							"quantity": { "avg": 0.05, "var": 0 }
+						}
+					]
+				}
+			}
+		],
+		"spawnconditionsByType": {
+			"treant-pine": {
+				"worldgen": {
+					"group": "hostile",
+					"TriesPerChunk": { "avg": 0.0014, "var": 0 },
+					"tryOnlySurface": true,
+					"groupSize": { "dist": "verynarrowgaussian", "avg": 1, "var": 0 },
+					"insideBlockCodes": ["game:air", "game:tallgrass-*", "game:snowlayer-1"],
+					"minTemp": -30,
+					"maxTemp": 20,
+					"minRain": 0.25,
+					"minForestOrShrubs": 0.20,
+					"maxForest": 0.75,
+					"maxShrubs": 0.6
+				}
+			},
+			"treant-walnut": {
+				"worldgen": {
+					"group": "hostile",
+					"TriesPerChunk": { "avg": 0.0014, "var": 0 },
+					"tryOnlySurface": true,
+					"groupSize": { "dist": "verynarrowgaussian", "avg": 1, "var": 0 },
+					"insideBlockCodes": ["game:air", "game:tallgrass-*", "game:snowlayer-1"],
+					"minTemp": 0,
+					"maxTemp": 30,
+					"minRain": 0.25,
+					"minForestOrShrubs": 0.50,
+					"maxForest": 0.75,
+					"maxShrubs": 0.6
+				}
+			},
+			"treant-oak": {
+				"worldgen": {
+					"group": "hostile",
+					"TriesPerChunk": { "avg": 0.0014, "var": 0 },
+					"tryOnlySurface": true,
+					"groupSize": { "dist": "verynarrowgaussian", "avg": 1, "var": 0 },
+					"insideBlockCodes": ["game:air", "game:tallgrass-*", "game:snowlayer-1"],
+					"minTemp": -10,
+					"maxTemp": 20,
+					"minRain": 0.25,
+					"minForestOrShrubs": 0.50,
+					"maxForest": 0.75,
+					"maxShrubs": 0.6
+				}
+			}
+		}
+	},
+	"idleSoundRange": 14,
+	"sounds": {
+		"hurt": "game:creature/drifter-hit",
+		"death": "game:effect/treefell",
+		"idle": "creature/treant_idle"
+	}
+}

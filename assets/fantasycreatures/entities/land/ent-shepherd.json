@@ -1,0 +1,194 @@
+{
+	"code": "ent-shepherd",
+	"class": "EntityAgent",
+	"variantgroups": [
+		{ "code": "type", "states": ["normal"]}
+	],
+	"hitboxSize": { "x": 1.8, "y": 3.8 },
+	"deadHitboxSize": { "x": 1.2, "y": 1.2 },
+	"canClimb": true,
+	"eyeHeight": 1.2,
+	"drops": [],
+	"client": {
+		"renderer": "Shape",
+		"shape": { "base": "entity/land/ent-shepherd" },
+		"texture": { "base": "entity/entshepherd/ent-shepherd" },
+		"size": 2.0,
+		"behaviors": [
+			{ "code": "repulseagents" }, 
+			{ "code": "controlledphysics", "stepHeight": 1.1251 }, 
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "interpolateposition" },
+			{ "code": "harvestable", "quantitySlots": 4, "duration": 2 }
+		],
+		"animations": [
+			{
+				"code": "death",
+				"animation": "death", 
+				"animationSpeed": 0.7,
+				"weight": 10,
+				"blendMode": "Average",
+				"triggeredBy": { "onControls": ["dead"] }
+			},
+			{ 
+				"code": "idle", 
+				"animation": "idle",
+				"weight": 0.01,
+				"blendMode": "Average",
+				"triggeredBy": { "defaultAnim": true }
+			},
+			{ 
+				"code": "walk", 
+				"animation": "walk",
+				"weight": 1.0,
+				"blendMode": "AddAverage"
+			},
+			{ 
+				"code": "attack", 
+				"animation": "attack",
+				"weight": 2.0,
+				"blendMode": "AddAverage"
+			}
+		]
+	},
+	"server": {
+		"behaviors": [
+			{ "code": "repulseagents" }, 
+			{ "code": "controlledphysics", "stepHeight": 1.1251 },
+			{ "code": "health", "currenthealth": 50, "maxhealth": 50 },
+			{ "code": "deaddecay", "hoursToDecay": 3.0 },
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "despawn", "minPlayerDistance": 64, "minSeconds": 3000 },
+			{
+				"code": "taskai",
+				"aitasks": [
+					{
+						"code": "fleeentity",
+						"entityCodes": ["treant-walnut", "treant-oak", "treant-pine", "dragon-*"],
+						"priority": 1.5,
+						"movespeed": 0.012,
+						"seekingRange": 10,
+						"animationSpeed": 1.2,
+						"animation": "walk"
+					},
+					{
+						"code": "meleeattack",
+						"entityCodes": [
+							"player", 
+							"cavegoblin-normal", 
+							"cavegoblin-lessarmored", 
+							"surfacegoblin-normal", 
+							"surfacegoblin-armored", 
+							"surfacegoblin-hunter", 
+							"surfacegoblin-alternate_1", 
+							"lonehuntergoblin-pelted", 
+							"lonehuntergoblin-normal", 
+							"ork-normal", 
+							"ork-alternate_1",
+							"slime-blue","slime-green",
+							"game:drifter-*"
+						],
+						"priority": 2,
+						"minDist": 2.3,
+						"minVerDist": 4.1,
+						"damage": 12,
+						"damageTier": 1,
+						"mincooldown": 500, 
+						"maxcooldown": 1750, 
+						"damagePlayerAtMs": 400,
+						"attackDurationMs": 1000,
+						"knockbackStrength": 3.0,
+						"animation": "attack",
+						"animationSpeed": 1.0,
+						"sound": "game:effect/treefell"
+					},
+					{
+						"code": "wander", 
+						"priority": 1.0, 
+						"movespeed": 0.01,
+						"animationSpeed": 1.0,
+						"animation": "walk",
+						"preferredLightLevel": 15
+					},
+					{
+						"code": "idle",
+						"priority": 1.2,
+						"priorityForCancel": 1.35,
+						"minduration": 1200,
+						"maxduration": 1200,
+						"chance": 0.1,
+						"initialMinCoolDown": 3000,
+						"initialMaxCoolDown": 8000,
+						"mincooldown": 3000,
+						"maxcooldown": 8000,
+						"animation": "idle",
+						"animationSpeed": 1.0
+					},
+					{
+						"code": "getoutofwater",
+						"priority": 1.4,
+						"movespeed": 0.01,
+						"animation": "walk",
+						"animationSpeed": 1.6
+					},
+					{ 
+						"code": "lookaround", 
+						"priority": 0.5
+					}
+				]
+			},
+			{ "code":
+				"harvestable",
+				"duration": 2,
+				"quantitySlots": 4,
+				"drops": [
+					{
+						"type": "item",
+						"code": "game:resin",
+						"quantity": { "dist": "uniform", "avg": 5, "var": 3 }
+					},
+					{
+						"type": "item",
+						"code": "game:mushroom-deathcap-normal",
+						"quantity": { "avg": 0.2, "var": 0 }
+					},
+					{
+						"type": "item",
+						"code": "game:mushroom-redwinecap-normal",
+						"quantity": { "dist": "uniform", "avg": 3, "var": 2 }
+					},
+					{
+						"type": "item",
+						"code": "game:wildbeehive-inlog-maple",
+						"quantity": { "avg": 0.5, "var": 0 }
+					}
+				]
+			}
+		],
+		"spawnconditions": {
+			"worldgen": {
+				"TriesPerChunk": { "avg": 0.0008, "var": 0.0001 },
+				"tryOnlySurface": true,
+				"maxQuantityByGroup": {
+					"code": "ent-shepherd-normal",
+					"maxQuantity": 0
+				},
+				"groupSize": { "dist": "uniform", "avg": 1.1, "var": 1 },
+				"insideBlockCodes": ["game:air", "game:tallgrass", "game:snowlayer-1"],
+				"minTemp": -10,
+				"maxTemp": 40,
+				"minRain": 0.25,
+				"minForestOrShrubs": 0.1,
+				"maxForest": 1.0,
+				"maxShrubs": 1.0,
+				"companions": ["fantasycreatures:treant-walnut","fantasycreatures:treant-oak","fantasycreatures:treant-pine"]
+			}
+		}
+	},
+	"idleSoundRange": 14,
+	"sounds": {
+		"hurt": "game:creature/drifter-hit",
+		"death": "game:effect/treefell",
+		"idle": "creature/treant_idle"
+	}
+}
