@@ -1,0 +1,56 @@
+[
+{
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": { "name": "Encrustable" },
+    "file": "fagothic:itemtypes/wearable/fa-gothic-body.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": { "name": "Encrustable" },
+    "file": "fagothic:itemtypes/wearable/fa-gothic-head.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": { "name": "Encrustable" },
+    "file": "fagothic:itemtypes/wearable/fa-gothic-legs.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": { "name": "Encrustable" },
+    "file": "fagreenwich:itemtypes/wearable/fa-greenwich-head.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": { "name": "Encrustable" },
+    "file": "fagreenwich:itemtypes/wearable/fa-greenwich-legs.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": { "name": "Encrustable" },
+    "file": "fagreenwich:itemtypes/wearable/fa-greenwich-body.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": { "name": "Encrustable" },
+    "file": "fatemplar:itemtypes/wearable/fa-templar-head.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": { "name": "Encrustable" },
+    "file": "fatemplar:itemtypes/wearable/fa-templar-body.json"
+  },
+  {
+    "op": "add",
+    "path": "/behaviors/-",
+    "value": { "name": "Encrustable" },
+    "file": "fatemplar:itemtypes/wearable/fa-templar-legs.json"
+  }
+]

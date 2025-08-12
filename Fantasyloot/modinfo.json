@@ -1,0 +1,16 @@
+{
+  "type": "code",
+  "modid": "fantasyloot",
+  "name": "fantasyloot",
+  "website": "",
+  "description" : "Server balance mod pack for the underdog theory discord.",
+  "authors": [ "ribsin"  ],
+  "version": "0.0.1",
+  "side": "Universal",
+  "networkVersion": null,
+  "dependencies": {},
+  "Contributors": [],
+  "RequiredOnClient": true,
+  "RequiredOnServer": true
+
+}

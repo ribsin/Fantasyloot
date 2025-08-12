@@ -1,0 +1,119 @@
+
+[
+{"_commment": "This section contains patches for the stack randomizer add alchemy loot.",
+    
+    "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier1/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier1/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+
+
+  }, 
+ { "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier2/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier2/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+   { "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier3/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier3/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+   { "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier4/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier4/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+   { "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier5/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-surfacetowerstier5/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+   { "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier1/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier1/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  { "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier2/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier2/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  { "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier3/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier3/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  { "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier4/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier4/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  { "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier5/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-hungerenhance-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  },
+  {
+    "op":"add", 
+    "path":"/attributesByType/*-undergroundtowerstier5/stacks/1",
+    "type":"item", "code":"alchemy:potionbase-herbball-mining-weak", "quantity": {"avg": 3, "var": 0.2}, "chance": 2,
+    "side": "Server"
+  }
+  
+  
+]

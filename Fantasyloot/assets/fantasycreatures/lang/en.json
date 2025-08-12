@@ -1,0 +1,97 @@
+{
+	"item-creature-cavegoblin-normal": "Cave Goblin",
+	"item-dead-creature-cavegoblin-normal": "Dead Cave Goblin",
+	"itemdesc-creature-cavegoblin-normal": "Cursed vermin, offspring of chaos.",
+	
+	"item-dead-creature-cavegoblin-lessarmored": "Dead Cave Goblin",
+	"item-creature-cavegoblin-lessarmored": "Cave Goblin",
+	"itemdesc-creature-cavegoblin-lessarmored": "Cursed vermin, offspring of chaos.",
+
+	"item-dead-creature-lonehuntergoblin-normal": "Dead Lone Hunter Goblin",
+	"item-creature-lonehuntergoblin-normal": "Lone Hunter Goblin",
+	"itemdesc-creature-lonehuntergoblin-normal": "Cursed vermin, offspring of chaos.",
+
+	"item-dead-creature-lonehuntergoblin-pelted": "Dead Lone Hunter Goblin",
+	"item-creature-lonehuntergoblin-pelted": "Lone Hunter Goblin",
+	"itemdesc-creature-lonehuntergoblin-pelted": "Cursed vermin, offspring of chaos.",
+
+	"item-dead-creature-surfacegoblin-hunter": "Dead Hunter Goblin",
+	"item-creature-surfacegoblin-hunter": "Hunter Goblin",
+	"itemdesc-creature-surfacegoblin-normal": "Cursed vermin, offspring of chaos.",
+	
+	"item-creature-surfacegoblin-normal": "Goblin",
+	"item-dead-creature-surfacegoblin-normal": "Dead Goblin",
+	"itemdesc-creature-surfacegoblin-normal": "Cursed vermin, offspring of chaos.",
+
+	"item-creature-surfacegoblin-alternate_1": "Goblin",
+	"item-dead-creature-surfacegoblin-alternate_1": "Dead Goblin",
+	"itemdesc-creature-surfacegoblin-alternate_1": "Cursed vermin, offspring of chaos.",
+
+	"item-creature-ork-normal": "Ork",
+	"item-dead-creature-ork-normal": "Dead Ork",
+	"itemdesc-creature-ork-normal": "Suideakin, pig people. Probably born of a curse.",
+
+	"item-creature-ork-alternate_1": "Ork",
+	"item-dead-creature-ork-alternate_1": "Dead Ork",
+	"itemdesc-creature-ork-alternate_1": "Suideakin, pig people. Probably born of a curse.",
+
+	"item-creature-surfacegoblin-armored": "Goblin",
+	"item-dead-creature-surfacegoblin-armored": "Dead Goblin",
+	"itemdesc-creature-surfacegoblin-armored": "Cursed vermin, offspring of chaos.",
+
+	"item-creature-skeleton-normal": "Skeleton",
+	"item-dead-creature-skeleton-normal": "Skeleton Remains",
+	"itemdesc-creature-skeleton-normal": "A restless animated undead.",
+
+	"item-creature-skeleton-deserter-normal": "Skeleton Deserter",
+	"item-dead-creature-skeleton-deserter-normal": "Skeleton Deserter Remains",
+	"itemdesc-creature-skeleton-deserter-normal": "A restless animated undead.",
+
+	"item-creature-skeletonblkgrd-normal": "Skeleton Blackguard",
+	"item-dead-creature-skeletonblkgrd-normal": "Skeleton Remains",
+	"itemdesc-creature-skeletonblkgrd-normal": "A restless animated undead.",
+
+	"item-creature-surface_skeleton-normal": "Skeleton",
+	"item-dead-creature-surface_skeleton-normal": "Skeleton Remains",
+	"itemdesc-creature-surface_skeleton-normal": "A restless animated undead.",
+
+	"deathmsg-goblin-normal": "Player {0} was slain by a goblin.",
+	"deathmsg-goblin-lessarmored": "Player {0} was slain by a goblin.",
+	"deathmsg-skeleton-normal": "Player {0} was slain by a Skeleton.",
+
+	"deadcreature-goblin-normal": "Appears to be slain by something.",
+	"deadcreature-goblin-lessarmored": "Appears to be slain by something.",
+	"deadcreature-skeleton-normal": "Appears to be slain by something.",
+
+	"item-dead-creature-treant-walnut": "Dead Walnut Treant",
+	"item-creature-treant-walnut": "Walnut Treant",
+	"itemdesc-creature-treant-walnut": "The Ent Shepherds flock, ancient souls of the land.",
+
+	"item-dead-creature-treant-pine": "Dead Pine Treant",
+	"item-creature-treant-pine": "Pine Treant",
+	"itemdesc-creature-treant-pine": "The Ent Shepherds flock, ancient souls of the land.",
+
+	"item-dead-creature-treant-oak": "Dead Oak Treant",
+	"item-creature-treant-oak": "Oak Treant",
+	"itemdesc-creature-treant-oak": "The Ent Shepherds flock, ancient souls of the land.",
+
+	"item-dead-creature-ent-shepherd-normal": "Dead Ent Shepherd",
+	"item-creature-ent-shepherd-normal": "Ent Shepherd",
+	"itemdesc-creature-ent-shepherd-normal": "The Ent Shepherds, friendly if you keep your distance.",
+
+	"item-dead-creature-slime-blue": "Dead Blue Slime",
+	"item-creature-slime-blue": "Blue Slime",
+	"itemdesc-creature-slime-blue": "Fast in water, they taste weird.",
+
+	"item-dead-creature-slime-green": "Dead Green Slime",
+	"item-creature-slime-green": "Green Slime",
+	"itemdesc-creature-slime-green": "Fast in water, they taste weird.",
+
+	"item-dead-creature-dragon-flying-red": "Dead Red Dragon",
+	"item-creature-dragon-flying-red": "Red Dragon Healing",
+	"itemdesc-creature-dragon-flying-red": "",
+
+	"item-dead-creature-dragon-red": "Dead Red Dragon",
+	"item-creature-dragon-red": "Red Dragon",
+	"itemdesc-creature-dragon-red": ""
+}

@@ -1,0 +1,73 @@
+{
+  "code": "creature",
+  "class": "ItemCreature",
+  "maxstacksize": 64,
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "treant-pine" ]
+    }
+  ],
+  "shape": {
+    "base": "entity/land/treant-pine"
+  },
+  "textures": {
+        "empty": { "base": "block/empty"},
+        "largeleaves": { "base": "entity/treant/pine1"},
+        "log12": { "base": "entity/treant/pine1"},
+        "logside": { "base": "game:block/wood/bark/pine"},
+        "logwide": { "base": "block/wood/bark/pinewide"},
+        "log": { "base": "game:block/wood/treetrunk/pine"},
+        "treantface": { "base": "entity/treant/pineface"}
+    },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "creatures": [ "*" ]
+  },
+  "materialDensity": 600,
+  "guiTransform": {
+    "rotation": {
+      "x": 0,
+      "y": -135,
+      "z": -180
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 2.4,
+      "z": 0.5
+    },
+    "scale": 0.15
+  },
+  "fpHandTransform": {
+    "rotation": {
+      "x": 0,
+      "y": -90,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.15,
+      "z": 0.5
+    },
+    "scale": 0.15
+  },
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0.15,
+      "z": 0
+    },
+    "rotation": {
+      "x": 0,
+      "y": -90,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.15,
+      "z": 0.5
+    },
+    "scale": 0.1
+  }
+}

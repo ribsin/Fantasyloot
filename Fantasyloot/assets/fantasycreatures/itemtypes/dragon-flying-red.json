@@ -1,0 +1,65 @@
+{
+  "code": "creature",
+  "class": "ItemCreature",
+  "maxstacksize": 64,
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "dragon-flying-red" ]
+    }
+  ],
+  "shape": {
+    "base": "entity/land/dragon_icon"
+  },
+  "texture": { "base": "entity/dragon/dragon_icon" },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "creatures": [ "*" ]
+  },
+  "materialDensity": 600,
+  "guiTransform": {
+    "rotation": {
+      "x": 0,
+      "y": -90,
+      "z": -180
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.8,
+      "z": 0.5
+    },
+    "scale": 1.2
+  },
+  "fpHandTransform": {
+    "rotation": {
+      "x": 0,
+      "y": -90,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.15,
+      "z": 0.5
+    },
+    "scale": 0.8
+  },
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0.15,
+      "z": 0
+    },
+    "rotation": {
+      "x": 0,
+      "y": -90,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.15,
+      "z": 0.5
+    },
+    "scale": 0.1
+  }
+}

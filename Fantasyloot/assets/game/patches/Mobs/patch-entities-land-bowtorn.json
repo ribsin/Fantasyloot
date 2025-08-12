@@ -1,0 +1,375 @@
+[
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-surface",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.015,
+              "var": 0
+            }
+          },
+           {
+            "type": "item",
+            "code": "coinage:planchet-gold-circle-md",
+            "quantity": {
+              "avg": 2,
+              "var": 0.4
+            }
+          },
+          {
+            "type": "item",
+            "code": "flint",
+            "quantity": {
+              "avg": 0.06,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "clay-red",
+            "quantity": {
+              "avg": 0.15,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "gear-rusty",
+            "dropModbyStat": "rustyGearDropRate",
+            "quantity": {
+              "avg": 0.01,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "flaxfibers",
+            "quantity": {
+              "avg": 0.2,
+              "var": 0
+            }
+          },        
+          
+          {
+            "type": "item",
+            "code": "game:metalbit-copper",
+            "quantity": {
+              "avg": 0.3,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "game:stone-limestone",
+            "quantity": {
+              "avg": 0.25,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "game:stick",
+            "quantity": {
+              "avg": 0.15,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "game:cattailtops",
+            "quantity": {
+              "avg": 0.15,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/land/bowtorn.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-deep",
+        "value": [
+          {
+            "type": "item",
+            "code": "gear-temporal",
+            "quantity": {
+              "avg": 0.04,
+              "var": 0
+            }
+          },
+           {
+            "type": "item",
+            "code": "coinage:planchet-gold-circle-md",
+            "quantity": {
+              "avg": 2,
+              "var": 0.4
+            }
+          },
+          {
+            "type": "item",
+            "code": "game:stone-obsidian",
+            "quantity": {
+              "avg": 0.25,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "game:salt",
+            "quantity": {
+              "avg": 0.15,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "clay-blue",
+            "quantity": {
+              "avg": 0.25,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "gear-rusty",
+            "dropModbyStat": "rustyGearDropRate",
+            "quantity": {
+              "avg": 0.08,
+              "var": 0
+            }
+          },
+          {
+            "type": "item",
+            "code": "flaxfibers",
+            "quantity": {
+              "avg": 0.5,
+              "var": 0
+            }
+          },
+          {
+            "type": "block",
+            "code": "game:metal-scraps",
+            "quantity": {
+              "avg": 0.2,
+              "var": 0
+            }
+          },         
+          {
+            "type": "item",
+            "code": "game:metalbit-tin",
+            "quantity": {
+              "avg": 0.5,
+              "var": 0
+            }
+          }
+        ],
+        "file": "entities/land/bowtorn.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-tainted",
+        "value": [
+              {
+                "type": "item",
+                "code": "gear-temporal",
+                "quantity": { "avg": 0.05, "var": 0 }
+              },
+               {
+            "type": "item",
+            "code": "Coinage:coinage:planchet-gold-circle-md",
+            "quantity": {
+              "avg": 2,
+              "var": 0.4
+            }
+          },
+              {
+                "type": "item",
+                "code": "gear-rusty",
+                "dropModbyStat": "rustyGearDropRate",
+                "quantity": { "avg": 0.09, "var": 0 }
+              },
+              {
+                "type": "item",
+                "code": "game:stick",
+                "quantity": {
+                  "avg": 0.15,
+                  "var": 0
+                }
+              },
+              {
+                "type": "item",
+                "code": "clay-fire",
+                "quantity": {
+                  "avg": 0.25,
+                  "var": 0
+                }
+              },
+              {
+                "type": "item",
+                "code": "flaxfibers",
+                "quantity": { "avg": 0.9, "var": 0 }
+              },              
+              {
+                "type": "item",
+                "code": "game:metalbit-bismuthbronze",
+                "quantity": {
+                  "avg": 0.8,
+                  "var": 0
+                }
+              }
+        ],
+        "file": "entities/land/bowtorn.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-corrupt",
+        "value": [
+              {
+                "type": "item",
+                "code": "gear-temporal",
+                "quantity": { "avg": 0.08, "var": 0 }
+              },
+               {
+            "type": "item",
+            "code": "Coinage:coinage:planchet-gold-circle-md",
+            "quantity": {
+              "avg": 2,
+              "var": 0.4
+            }
+          },
+              {
+                "type": "item",
+                "code": "gear-rusty",
+                "dropModbyStat": "rustyGearDropRate",
+                "quantity": { "avg": 0.25, "var": 0 }
+              },
+              {
+                "type": "item",
+                "code": "clay-fire",
+                "quantity": {
+                  "avg": 0.4,
+                  "var": 0
+                }
+              },
+              {
+                "type": "item",
+                "code": "flaxtwine",
+                "quantity": { "avg": 0.8, "var": 0 }
+              },              
+              {
+                "type": "item",
+                "code": "game:stick",
+                "quantity": {
+                  "avg": 0.15,
+                  "var": 0
+                }
+              },
+              {
+                "type": "item",
+                "code": "game:metalbit-iron",
+                "quantity": {
+                  "avg": 1,
+                  "var": 0.5
+                }
+              }
+        ],
+        "file": "entities/land/bowtorn.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-nightmare",
+        "value": [
+              {
+                "type": "item",
+                "code": "gear-temporal",
+                "quantity": { "avg": 0.5, "var": 0 }
+              },
+               {
+            "type": "item",
+            "code": "Coinage:coinage:planchet-gold-circle-md",
+            "quantity": {
+              "avg": 2,
+              "var": 0.4
+            }
+          },
+              {
+                "type": "item",
+                "code": "gear-rusty",
+                "dropModbyStat": "rustyGearDropRate",
+                "quantity": { "avg": 0.4, "var": 0 }
+              },
+              {
+                "type": "item",
+                "code": "flaxtwine",
+                "quantity": { "avg": 1, "var": 0 }
+              },              
+              {
+                "type": "item",
+                "code": "game:metalbit-gold",
+                "quantity": {
+                  "avg": 1,
+                  "var": 0.5
+                }
+              }
+        ],
+        "file": "entities/land/bowtorn.json",
+                    "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/server/behaviors/9/dropsByType/*-gearfoot",
+        "value": [
+              {
+                "type": "item",
+                "code": "gear-temporal",
+                "quantity": { "avg": 2, "var": 0.4 }
+              },
+              {
+            "type": "item",
+            "code": "Coinage:coinage:planchet-gold-circle-md",
+            "quantity": {
+              "avg": 2,
+              "var": 0.6
+            }
+          },
+              {
+                "type": "item",
+                "code": "gear-rusty",
+                "dropModbyStat": "rustyGearDropRate",
+                "quantity": { "avg": 7, "var": 2.5 }
+              },
+              {
+                "type": "item",
+                "code": "flaxtwine",
+                "quantity": { "avg": 2, "var": 0 }
+              },
+              {
+                "type": "item",
+                "code": "game:metalbit-gold",
+                "quantity": {
+                  "avg": 2,
+                  "var": 0.7
+                }
+              }
+        ],
+        "file": "entities/land/bowtorn.json",
+                    "side": "Server"
+    },
+    {
+      "op": "addmerge",
+      "path": "/behaviorConfigs",
+      "value": {
+        "harvestable": {
+          "quantitySlots": 10
+        }
+      },
+              "file": "entities/land/bowtorn.json"
+          }
+      ]
