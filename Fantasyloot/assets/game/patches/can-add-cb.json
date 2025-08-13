@@ -52,5 +52,47 @@
     "path": "/behaviors/-",
     "value": { "name": "Encrustable" },
     "file": "fatemplar:itemtypes/wearable/fa-templar-legs.json"
+  },
+  {
+    "op": "add",
+    "path": "canjewelry:cancoronet-*",
+    "value": {"enable":"false"},
+    "file": "canjewelry/assets/canjewerly/recipes/smithing/coronetbase.json"
+
+  },
+  {
+    "op": "add",
+    "path": "canjewelry:cantiara-*",
+    "value": {"enable":"false"},
+    "file": "canjewelry/assets/canjewerly/recipes/smithing/tiara.json"
+
+  },
+  {
+    "op": "add",
+    "path": "canjewelry:canarmband-*",
+    "value": {"enable":"false"},
+    "file": "canjewelry/assets/canjewerly/recipes/grid/can-armband.json"
+
+  },
+  {
+    "op": "add",
+    "path": "canjewelry:canmonocle-*",
+    "value": {"enable":"false"},
+    "file": "canjewelry/assets/canjewerly/recipes/grid/can-monocle.json"
+    
+  },
+  {
+    "op": "add",
+    "path": "canjewelry:cansimplenecklace-*",
+    "value": {"enable":"false"},
+    "file": "canjewelry/assets/canjewerly/recipes/grid/can-simple-necklace.json"
+
+  },
+  {
+    "op": "add",
+    "path": "canjewelry:canrottenkingmask-*",
+    "value": {"enable":"false"},
+    "file": "canjewelry/assets/canjewerly/recipes/grid/rottenkingmask.json"
+
   }
 ]

@@ -1,0 +1,68 @@
+[
+  {
+    "enabled": true,
+    "file": "swordz:itemtypes/wearable/armor.json",
+    "op": "addmerge",
+    "path": "/behaviors",
+    "value": [ { "name": "CollectibleBehaviorMagicEquipStatsDisplayRM" } ]
+  },
+
+  {
+    "enabled": true,
+    "file": "swordz:itemtypes/wearable/armor.json",
+    "op": "addmerge",
+    "path": "/attributes/magicStatModifiersByType",
+    "value": {
+      
+      "*-stainlesssteel": {
+        "perTierRelativeMagicProtectionLoss": [ 0.03, 0.15 ],
+        "perTierFlatMagicDamageReductionLoss": [ 0.1, 0.2 ],
+        "flatMagicDamageReduction": 0.5,
+        "relativeMagicProtection": 0.35,
+        "magicProtectionTier": 2
+      },
+      "*-titanium": {
+        "perTierRelativeMagicProtectionLoss": [ 0.03, 0.15 ],
+        "perTierFlatMagicDamageReductionLoss": [ 0.1, 0.2 ],
+        "flatMagicDamageReduction": 0.5,
+        "relativeMagicProtection": 0.35,
+        "magicProtectionTier": 2
+      },
+      "*-mithril": {
+        "perTierRelativeMagicProtectionLoss": [ 0.03, 0.15 ],
+        "perTierFlatMagicDamageReductionLoss": [ 0.1, 0.2 ],
+        "flatMagicDamageReduction": 0.5,
+        "relativeMagicProtection": 0.35,
+        "magicProtectionTier": 2
+      },
+      "*-adamant": {
+        "perTierRelativeMagicProtectionLoss": [ 0.03, 0.15 ],
+        "perTierFlatMagicDamageReductionLoss": [ 0.1, 0.2 ],
+        "flatMagicDamageReduction": 0.5,
+        "relativeMagicProtection": 0.35,
+        "magicProtectionTier": 2
+      },
+      "*-orichalcum": {
+        "perTierRelativeMagicProtectionLoss": [ 0.03, 0.15 ],
+        "perTierFlatMagicDamageReductionLoss": [ 0.1, 0.2 ],
+        "flatMagicDamageReduction": 0.5,
+        "relativeMagicProtection": 0.35,
+        "magicProtectionTier": 2
+      },
+      "*-aithril": {
+        "perTierRelativeMagicProtectionLoss": [ 0.03, 0.15 ],
+        "perTierFlatMagicDamageReductionLoss": [ 0.1, 0.2 ],
+        "flatMagicDamageReduction": 0.5,
+        "relativeMagicProtection": 0.35,
+        "magicProtectionTier": 2
+      },
+      "*": {
+        "perTierRelativeMagicProtectionLoss": [ 0.03, 0.15 ],
+        "perTierFlatMagicDamageReductionLoss": [ 0.1, 0.2 ],
+        "flatMagicDamageReduction": 0.5,
+        "relativeMagicProtection": 0.20,
+        "magicProtectionTier": 2
+      }
+    }
+  }
+]
