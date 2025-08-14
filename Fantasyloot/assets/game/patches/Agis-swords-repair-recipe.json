@@ -212,19 +212,5 @@
 	"shapeless": true,
 	"averageDurability": false,
 	"output": { "type": "item", "code": "swordz:armor-legs-plate-{metal}"  }
-},
-{
-	"ingredientPattern": "AR",
-	"requiresTrait": "smith",
-	"ingredients": {
-		"A": { "type": "item", "code": "swordz:shield-*", "name": "type" },
-		"R": { "type": "item", "code": "agiclasses:tools-*", "isTool": true, "toolDurabilityCost": 5 }
-	},
-	"width": 2,
-	"height": 1,
-	"recipeGroup": 2,
-	"shapeless": true,
-	"averageDurability": false,
-	"output": { "type": "item", "code": "swordz:shield-{type}"  }
 }
 ]

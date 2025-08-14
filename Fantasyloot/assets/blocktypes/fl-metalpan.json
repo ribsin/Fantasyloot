@@ -1,0 +1,187 @@
+[
+
+{
+	"enabled": true,
+	"code": "metalpan",
+	"class": "BlockPan",
+	"behaviors": [
+		{ "name": "SneakPlacing"}, 
+		{ "name": "UnstableFalling", "properties": { "attachmentArea": { "x1": 5, "y1": 0, "z1": 5, "x2": 10, "y2": 0, "z2": 10 } }}, 
+		{ "name": "RightClickPickup"} 
+	],
+	"maxStackSize": 1,
+	"attributes": {
+		"panningDrops": {
+			"@(bonysoil|bonysoil-.*)": [
+				{ "type": "item", "code": "game:bone",  "chance": { "avg": 0.2, "var": 0 }  },
+				{ "type": "item", "code": "game:flaxfibers",  "chance": { "avg": 0.15, "var": 0 }  },
+				{ "type": "item", "code": "game:gear-rusty",  "chance": { "avg": 0.05, "var": 0 }, "dropModbyStat": "rustyGearDropRate"  },
+				{ "type": "block", "code": "game:bonyremains-ribcage",  "chance": { "avg": 0.015, "var": 0 }  },
+				{ "type": "item", "code": "game:candle",  "chance": { "avg": 0.035, "var": 0 }  },
+				{ "type": "item", "code": "game:gem-emerald-rough", "attributes": { "potential": "low" },  "chance": { "avg": 0.012, "var": 0 }  },
+				{ "type": "item", "code": "game:gem-olivine_peridot-rough", "attributes": { "potential": "low" },  "chance": { "avg": 0.012, "var": 0 }  },
+				{ "type": "item", "code": "game:gem-diamond-rough", "attributes": { "potential": "low" },  "chance": { "avg": 0.008, "var": 0 }  },
+				{ "type": "item", "code": "game:chutesection-copper",  "chance": { "avg": 0.0075, "var": 0 }  },
+				{ "type": "block", "code": "game:metal-scraps",  "chance": { "avg": 0.012, "var": 0 }  },
+				{ "type": "block", "code": "game:metal-parts",  "chance": { "avg": 0.009, "var": 0 }  },
+				{ "type": "block", "code": "game:torchholder-aged-empty-north",  "chance": { "avg": 0.0065, "var": 0 }  },
+				{ "type": "item", "code": "game:nugget-nativegold",  "chance": { "avg": 0.12, "var": 0 }  },
+				{ "type": "item", "code": "game:nugget-nativesilver",  "chance": { "avg": 0.12, "var": 0 }  },
+				{ "type": "item", "code": "game:spearhead-copper",  "chance": { "avg": 0.009, "var": 0 }  },
+				{ "type": "item", "code": "game:arrowhead-tinbronze",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:spearhead-tinbronze",  "chance": { "avg": 0.008, "var": 0 }  },
+				{ "type": "item", "code": "game:arrowhead-copper",  "chance": { "avg": 0.08, "var": 0 }  },
+				{ "type": "item", "code": "game:gear-temporal",  "chance": { "avg": 0.002, "var": 0 }  },
+				{ "type": "item", "code": "game:metallamellae-copper",  "chance": { "avg": 0.002, "var": 0 }  },
+				{ "type": "item", "code": "game:metallamellae-tinbronze",  "chance": { "avg": 0.0012, "var": 0 }  },
+				{ "type": "item", "code": "game:metalchain-copper",  "chance": { "avg": 0.002, "var": 0 }  },
+				{ "type": "item", "code": "game:metalchain-tinbronze",  "chance": { "avg": 0.0012, "var": 0 }  },
+				{ "type": "item", "code": "game:metalplate-copper",  "chance": { "avg": 0.0015, "var": 0 }  },
+				{ "type": "item", "code": "game:metalplate-tinbronze",  "chance": { "avg": 0.001, "var": 0 }  },
+				{ "type": "item", "code": "game:clothes-neck-golden-necklace",  "chance": { "avg": 0.0004, "var": 0 }  },
+				{ "type": "item", "code": "game:clothes-neck-bronze-gem-necklace",  "chance": { "avg": 0.0004, "var": 0 }  },
+				{ "type": "item", "code": "game:clothes-arm-bronze-armlet",  "chance": { "avg": 0.0016, "var": 0 }  },		
+				{ "type": "item", "code": "game:clothes-arm-silver-chain",  "chance": { "avg": 0.0004, "var": 0 }  },	
+				{ "type": "item", "code": "game:clothes-head-silver-diadem",  "chance": { "avg": 0.0004, "var": 0 }  },
+				{ "type": "item", "code": "game:clothes-head-gold-coronet",  "chance": { "avg": 0.0004, "var": 0 }  },
+				{ "type": "item", "code": "game:bladehead-falx-copper",  "chance": { "avg": 0.09, "var": 0 }  },	
+				{ "type": "item", "code": "game:bladehead-falx-silver",  "chance": { "avg": 0.02, "var": 0 }  },
+				{ "type": "item", "code": "game:pickaxehead-copper",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:axehead-copper",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:axehead-silver",  "chance": { "avg": 0.0002, "var": 0 }  },
+				{ "type": "item", "code": "game:hammerhead-copper",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:hammerhead-gold",  "chance": { "avg": 0.0002, "var": 0 }  },
+				{ "type": "item", "code": "game:hoehead-copper",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:prospectingpickhead-copper",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:knifeblade-copper",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:sawblade-copper",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:shovelhead-copper",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:spearhead-copper",  "chance": { "avg": 0.05, "var": 0 }  }
+			],
+				"@(sand|gravel)-.*": [
+				{ "type": "item", "code": "game:stone-{rocktype}",  "chance": { "avg": 0.4, "var": 0 }  },
+				{ "type": "item", "code": "game:stone-halite",  "chance": { "avg": 0.1, "var": 0 }  },
+				{ "type": "item", "code": "game:stone-chalk",  "chance": { "avg": 0.15, "var": 0 }  },
+				
+				{ "type": "item", "code": "game:nugget-nativecopper",  "chance": { "avg": 0.3, "var": 0 }  },
+				{ "type": "item", "code": "game:nugget-sphalerite",  "chance": { "avg": 0.07, "var": 0 }  },
+				{ "type": "item", "code": "game:nugget-bismuthinite",  "chance": { "avg": 0.1, "var": 0 }  },
+				{ "type": "item", "code": "game:nugget-galena",  "chance": { "avg": 0.15, "var": 0 }  },
+				{ "type": "item", "code": "game:nugget-nativegold",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:nugget-nativesilver",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:nugget-cassiterite",  "chance": { "avg": 0.07, "var": 0 }  },
+				
+				{ "type": "item", "code": "game:crystalizedore-rich-nativecopper-andesite",  "chance": { "avg": 0.0075, "var": 0 }  },
+				{ "type": "item", "code": "game:crystalizedore-rich-galena-claystone",  "chance": { "avg": 0.0085, "var": 0 }  },
+				
+				{ "type": "item", "code": "game:ore-quartz",  "chance": { "avg": 0.05, "var": 0 }  },
+				{ "type": "item", "code": "game:clearquartz",  "chance": { "avg": 0.02, "var": 0 }  },
+				{ "type": "item", "code": "game:ore-lignite",  "chance": { "avg": 0.04, "var": 0 }  },
+				{ "type": "item", "code": "game:ore-bituminouscoal",  "chance": { "avg": 0.02, "var": 0 }  },
+				{ "type": "item", "code": "game:ore-anthracite",  "chance": { "avg": 0.01, "var": 0 }  },
+				{ "type": "item", "code": "game:ore-lapislazuli",  "chance": { "avg": 0.01, "var": 0 }  },
+				{ "type": "item", "code": "game:ore-cinnabar",  "chance": { "avg": 0.01, "var": 0 }  },
+				{ "type": "item", "code": "game:ore-sulfur",  "chance": { "avg": 0.01, "var": 0 }  },
+				{ "type": "item", "code": "game:ore-borax",  "chance": { "avg": 0.01, "var": 0 }  },
+				{ "type": "item", "code": "game:ore-alum",  "chance": { "avg": 0.008, "var": 0 }  },
+				{ "type": "item", "code": "game:ore-sylvite",  "chance": { "avg": 0.01, "var": 0 }  },
+				
+				{ "type": "item", "code": "game:gear-rusty",  "chance": { "avg": 0.0075, "var": 0 }, "dropModbyStat": "rustyGearDropRate"  },
+				{ "type": "block", "code": "game:metal-parts",  "chance": { "avg": 0.004, "var": 0 }  },
+				{ "type": "block", "code": "game:metal-scraps",  "chance": { "avg": 0.004, "var": 0 }  },
+				{ "type": "block", "code": "game:bonyremains-ribcage",  "chance": { "avg": 0.001, "var": 0 }  },
+				{ "type": "item", "code": "game:gear-temporal",  "chance": { "avg": 0.0008, "var": 0 }  },
+
+				{ "type": "item", "code": "game:knifeblade-chert",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:knifeblade-granite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:knifeblade-andesite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:knifeblade-basalt",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:knifeblade-peridotite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:knifeblade-obsidian",  "chance": { "avg": 0.005, "var": 0 }  },
+				{ "type": "item", "code": "game:knifeblade-flint",  "chance": { "avg": 0.08, "var": 0 }  },
+
+				{ "type": "item", "code": "game:shovelhead-chert",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:shovelhead-granite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:shovelhead-andesite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:shovelhead-basalt",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:shovelhead-peridotite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:shovelhead-obsidian",  "chance": { "avg": 0.005, "var": 0 }  },
+				{ "type": "item", "code": "game:shovelhead-flint",  "chance": { "avg": 0.08, "var": 0 }  },
+
+				{ "type": "item", "code": "game:spearhead-chert",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:spearhead-granite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:spearhead-andesite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:spearhead-basalt",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:spearhead-peridotite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:spearhead-obsidian",  "chance": { "avg": 0.005, "var": 0 }  },
+				{ "type": "item", "code": "game:spearhead-flint",  "chance": { "avg": 0.08, "var": 0 }  },
+
+				{ "type": "item", "code": "game:hoehead-chert",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:hoehead-granite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:hoehead-andesite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:hoehead-basalt",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:hoehead-peridotite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:hoehead-obsidian",  "chance": { "avg": 0.005, "var": 0 }  },
+				{ "type": "item", "code": "game:hoehead-flint",  "chance": { "avg": 0.08, "var": 0 }  },
+
+				{ "type": "item", "code": "game:axehead-chert",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:axehead-granite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:axehead-andesite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:axehead-basalt",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:axehead-peridotite",  "chance": { "avg": 0.03, "var": 0 }  },
+				{ "type": "item", "code": "game:axehead-obsidian",  "chance": { "avg": 0.005, "var": 0 }  },
+				{ "type": "item", "code": "game:axehead-flint",  "chance": { "avg": 0.08, "var": 0 }  }
+			]
+		}
+	},
+	"variantgroups": [
+		{ "code": "type", "states": ["copper" ] }
+	],
+	"shape": { "base": "game:block/wood/pan/empty" },
+	"textures": {
+		"wood-generic": { "base": "game:block/metal/anvil/copper" }
+	},
+	"doNotRenderAtLod2": true,
+	"blockmaterial": "Metal",
+	"durability": 150,
+	"randomizerotations": true,
+	"sideopaque": { "all": false },
+	"sidesolid": { "all": false },
+	"emitSideAO": { "all": false },
+	"lightAbsorption": 0,
+	"creativeinventory": { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	"heldTpIdleAnimation": "holdbothhandslarge", "heldTpUseAnimation": "twohandplaceblock",
+	"heldTpUseAnimation": "panning",
+	"fpHandTransform": {
+		"translation": { "x": 0.3, "y": 0, "z": 0 },
+		"rotation": { "x": 15, "y": 15, "z": 0 },
+		"scale": 2
+	},
+	"guiTransform": {
+		"rotate": true,
+		"translation": { "x": 0, "y": 0, "z": 0 },
+		"rotation": { "x": -25, "y": 22, "z": 0 },
+		"origin": { "x": 0.53, "y": 0.21, "z": 0.5 },
+		"scale": 1.76
+	},
+	"groundTransform": {
+		"translation": { "x": 0, "y": 0, "z": 0 },
+		"rotation": { "x": 0, "y": 18, "z": 0 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 4
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.58, "y": 0, "z": -0.34 },
+		"rotation": { "x": 0, "y": 18, "z": -74 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 0.8
+	},
+	"collisionSelectionBox": { "x1": 0.125, "y1": 0, "z1": 0.125, "x2": 0.875, "y2": 0.1875, "z2": 0.875 },
+	"resistance": 1,
+	"sounds": {
+		"place": "game:block/chandelier-hit",
+		"hit": "game:block/chandelier-hit",
+		"break": "game:block/chandelier-break"
+	}
+}
+]

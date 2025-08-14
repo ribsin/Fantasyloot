@@ -1,0 +1,175 @@
+[
+  {
+    "op": "add",
+    "path": "/0/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/cactiseeds.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/1/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/cactiseeds.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:itemtypes/cactiseeds.json",
+    
+    "side": "server"
+  },
+
+  {
+    "op": "add",
+    "path": "/0/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/cropseeds.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/1/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/cropseeds.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/2/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/cropseeds.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/3/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/cropseeds.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/2/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/fruitseeds.json",
+    
+    "side": "server"
+  },
+
+  {
+    "op": "add",
+    "path": "/0/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/fruitseeds.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/1/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/fruitseeds.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:itemtypes/wildseeds-smallberrybush.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:itemtypes/wildseeds-bigberrybush.json",
+    
+    "side": "server"
+  },  
+  
+  {
+    "op": "add",
+    "path": "/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:itemtypes/wildseeds-croton.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:itemtypes/wildseeds-fern.json",
+    
+    "side": "server"
+  },  
+  {
+    "op": "add",
+    "path": "/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:itemtypes/wildseeds-rafflesia.json",
+    
+    "side": "server"
+  },
+
+  {
+    "op": "add",
+    "path": "/0/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/reedroots.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/1/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/reedroots.json",
+    
+    "side": "server"
+  },
+
+  {
+    "op": "add",
+    "path": "/0/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/vinetrimming.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/1/requiresTrait",
+    "value": "greenthumb",
+    "file": "wildfarmingrevival:recipes/grid/vinetrimming.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/requiresTrait",
+    "value": "greenthumb",
+    "file": "game:recipes/grid/mushroomsubstrate.json",
+    
+    "side": "server"
+  },
+  {
+    "op": "add",
+    "path": "/requiresTrait",
+    "value": "greenthumb",
+    "file": "game:blocktypes/mushroomsubstrate.json",
+    
+    "side": "server"
+  }
+]
