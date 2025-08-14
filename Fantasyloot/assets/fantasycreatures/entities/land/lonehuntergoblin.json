@@ -182,15 +182,45 @@
 				"dropsByType": {
 					"lonehuntergoblin-normal": [
 						{
-							"type": "item",
-							"code": "game:gear-temporal",
-							"quantity": { "avg": 0.03, "var": 0 }
-						},
-						{
-							"type": "item",
-							"code": "game:flaxfibers",
-							"quantity": { "avg": 0.2, "var": 0 }
-						},
+            "type": "item",
+            "code": "Coinage:planchet-gold-circle-md",
+             "quantity": {"avg": 0.2,"var": 0 }
+          },
+          {
+            "type": "item",
+            "code": "flint",
+            "quantity": {"avg": 0.06,"var": 0}
+          },
+          {
+            "type": "item",
+            "code": "clay-red",
+            "quantity": {"avg": 0.15,"var": 0}
+          },         
+          {
+            "type": "item",
+            "code": "flaxfibers",
+            "quantity": {"avg": 0.2,"var": 0}
+          },          
+          {
+            "type": "item",
+            "code": "game:metalbit-copper",
+            "quantity": {"avg": 0.3,"var": 0}
+          },
+          {
+            "type": "item",
+            "code": "game:stone-limestone",
+            "quantity": {"avg": 0.25,"var": 0 }
+          },
+          {
+            "type": "item",
+            "code": "game:stick",
+            "quantity": {"avg": 0.15, "var": 0 }
+          },
+          {
+            "type": "item",
+            "code": "game:cattailtops",
+            "quantity": {"avg": 0.15, "var": 0 }
+		  },
 						{
 							"type": "item",
 							"code": "game:axe-andesite",

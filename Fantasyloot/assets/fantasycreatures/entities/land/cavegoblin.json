@@ -295,7 +295,7 @@
             "code": "game:cattailtops",
             "quantity": {"avg": 0.15, "var": 0 }
 		  },
-						{
+ 	{
 							"type": "item",
 							"code": "game:flaxfibers",
 							"quantity": { "dist": "uniform", "avg": 0.2, "var": 0 }
@@ -308,6 +308,7 @@
 					]
 				}
 			}
+					
 		],
 		"spawnconditions": {
 			"runtime": {

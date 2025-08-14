@@ -221,6 +221,16 @@
             "code": "game:cattailtops",
             "quantity": {"avg": 0.15, "var": 0 }
 		  },
+		  {
+							"type": "item",
+							"code": "game:gear-temporal",
+							"quantity": { "avg": 0.02666, "var": 0 }
+						},
+						{
+							"type": "item",
+							"code": "game:gear-rusty",
+							"quantity": { "avg": 1.2, "var": 1 }
+						},
 						{
 							"type": "item",
 							"code": "game:redmeat-raw",
@@ -240,59 +250,19 @@
 							"type": "item",
 							"code": "game:clothes-lowerbody-raw-hide-trousers",
 							"quantity": { "dist": "uniform", "avg": 0.0333, "var": 0 }
-						},
-                        {
-                            "type": "item",
-                            "code": "Coinage:planchet-gold-circle-md",
-                            "quantity": {"avg": 1,"var": 4 }
-                        },
-        				{
-       					    "type": "item",
-      					    "code": "agiclasses:meat-tainted-raw",
-      					    "quantity": { "avg": 0.5, "var": 0 }
-   					    }
+						}
 					],
 					"ork-alternate_1": [
 						{
-            "type": "item",
-            "code": "Coinage:planchet-gold-circle-md",
-             "quantity": {"avg": 0.2,"var": 0 }
-          },
-          {
-            "type": "item",
-            "code": "flint",
-            "quantity": {"avg": 0.06,"var": 0}
-          },
-          {
-            "type": "item",
-            "code": "clay-red",
-            "quantity": {"avg": 0.15,"var": 0}
-          },         
-          {
-            "type": "item",
-            "code": "flaxfibers",
-            "quantity": {"avg": 0.2,"var": 0}
-          },          
-          {
-            "type": "item",
-            "code": "game:metalbit-copper",
-            "quantity": {"avg": 0.3,"var": 0}
-          },
-          {
-            "type": "item",
-            "code": "game:stone-limestone",
-            "quantity": {"avg": 0.25,"var": 0 }
-          },
-          {
-            "type": "item",
-            "code": "game:stick",
-            "quantity": {"avg": 0.15, "var": 0 }
-          },
-          {
-            "type": "item",
-            "code": "game:cattailtops",
-            "quantity": {"avg": 0.15, "var": 0 }
-		  },
+							"type": "item",
+							"code": "game:gear-temporal",
+							"quantity": { "avg": 0.02666, "var": 0 }
+						},
+						{
+							"type": "item",
+							"code": "game:gear-rusty",
+							"quantity": { "dist": "uniform", "avg": 0.3, "var": 4 }
+						},
 						{
 							"type": "item",
 							"code": "game:spear-generic-flint",
@@ -312,22 +282,7 @@
 							"type": "item",
 							"code": "game:clothes-lowerbody-raw-hide-trousers",
 							"quantity": { "dist": "uniform", "avg": 0.0333, "var": 0 }
-						},
-                        {
-                            "type": "item",
-                            "code": "Coinage:planchet-gold-circle-md",
-                            "quantity": {"avg": 1, "var": 4    }
-                        },
-                        {
-                            "type": "item",
-                            "code": "agiclasses:meat-tainted-raw",
-                            "quantity": { "avg": 1, "var": 0 }
-                        },
-                        {
-                            "type": "item",
-                            "code": "agiclasses:swordfragments",
-                            "quantity": { "avg": 1, "var": 0 }
-                        }
+						}
 					]
 				}
 			}
